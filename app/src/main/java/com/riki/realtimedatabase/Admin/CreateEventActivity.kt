@@ -16,9 +16,17 @@ class CreateEventActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_event)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setTitle("Buat Event")
 
         //Sharedpref
         sharedpref = PreferencesHelper(this)
+
+        fun onSupportNavigateUp(): Boolean{
+            onBackPressed()
+            return super.onSupportNavigateUp()
+        }
 
         val namaEvent : EditText = findViewById(R.id.namaEvent)
         val jamMasuk : EditText = findViewById(R.id.jamMasuk)

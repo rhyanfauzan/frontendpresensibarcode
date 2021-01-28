@@ -118,6 +118,7 @@
         android:id="@+id/rv_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
