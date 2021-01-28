@@ -11,7 +11,7 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:background="@color/bg_purple"
+        android:background="@drawable/bg_purple"
         android:backgroundTint="@color/purple"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
@@ -33,7 +33,8 @@
             android:layout_marginRight="8dp"
             android:src="@drawable/ic_usericon"
             android:layout_width="20dp"
-            android:layout_height="20dp"/>
+            android:layout_height="20dp"
+            tools:ignore="VectorDrawableCompat" />
 
         <TextView
             android:id="@+id/tvUsernameAdmin"
@@ -108,7 +109,8 @@
             android:layout_height="24dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/ic_calendar"/>
+            android:src="@drawable/ic_calendar"
+            tools:ignore="VectorDrawableCompat" />
 
         <TextView
             android:layout_width="wrap_content"

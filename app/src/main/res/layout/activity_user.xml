@@ -10,7 +10,7 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:background="@color/bg_purple"
+        android:background="@drawable/bg_purple"
         android:backgroundTint="@color/purple"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
@@ -32,7 +32,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginRight="8dp"
-            android:src="@drawable/ic_usericon" />
+            app:srcCompat="@drawable/ic_usericon" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,7 +51,8 @@
             android:id="@+id/clearButton"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_logout" />
+            android:drawableLeft="@drawable/ic_logout"
+            app:backgroundTint="#FF5252"/>
 
     </LinearLayout>
 
@@ -91,7 +92,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/ic_calendar" />
+            app:srcCompat="@drawable/ic_calendar" />
 
         <TextView
             android:layout_width="wrap_content"
