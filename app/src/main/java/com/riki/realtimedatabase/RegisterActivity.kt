@@ -9,7 +9,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.riki.realtimedatabase.SharedPreferences.PreferencesHelper
 
 class RegisterActivity : AppCompatActivity() {
-    private lateinit var  sharedpref : PreferencesHelper
+    private lateinit var sharedpref: PreferencesHelper
     var database = FirebaseDatabase.getInstance().reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,17 +17,21 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         val etUsername : EditText = findViewById(R.id.etUsername)
-        val etPassword : EditText = findViewById(R.id.etNama)
+        val etPassword : EditText = findViewById(R.id.etPassword)
         val ButtonLogin : Button = findViewById(R.id.ButtonLogin)
         val etNama : EditText = findViewById(R.id.etNama)
 
+        var username = etUsername.text.toString()
+        var namaLengkap = etNama.text.toString()
+        var pass = etPassword.text.toString()
+
         ButtonLogin.setOnClickListener {
-            if(etUsername.text.toString() != "" && etPassword.text.toString() == ""){
+            if (username != null && namaLengkap != null && pass != null) {
                 database.child("Login").child(etUsername.text.toString()).child("level").setValue("user")
                 database.child("Login").child(etUsername.text.toString()).child("nama").setValue(etNama.text.toString())
                 database.child("Login").child(etUsername.text.toString()).child("password").setValue(etPassword.text.toString())
-                database.child("Login").child(etUsername.text.toString()).child("password").setValue(etUsername.text.toString())
-                Toast.makeText(this, "User Berhasil Dibuat !!",Toast.LENGTH_SHORT).show()
+                database.child("Login").child(etUsername.text.toString()).child("username").setValue(etUsername.text.toString())
+                Toast.makeText(this, "User Berhasil Dibuat !!", Toast.LENGTH_SHORT).show()
             }
         }
     }
