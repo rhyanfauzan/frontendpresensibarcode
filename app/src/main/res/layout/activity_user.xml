@@ -31,7 +31,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginRight="8dp"
-            android:src="@drawable/ic_usericon" />
+            app:srcCompat="@drawable/ic_usericon" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/ic_calendar" />
+            app:srcCompat="@drawable/ic_calendar" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
         android:layout_height="150dp"
         android:layout_marginBottom="12dp"
         android:layout_marginTop="32dp"
-        android:src="@drawable/ic_event"
+        app:srcCompat="@drawable/ic_event"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
@@ -103,7 +103,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="490dp"
+        android:layout_height="300dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="32dp"

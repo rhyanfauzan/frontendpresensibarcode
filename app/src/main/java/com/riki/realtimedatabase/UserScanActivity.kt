@@ -96,4 +96,9 @@ class UserScanActivity : AppCompatActivity(), View.OnClickListener {
         startActivity(Intent(this,UserActivity::class.java))
         finish()
     }
+
+    override fun onBackPressed() {
+        finish()
+        super.onBackPressed()
+    }
 }

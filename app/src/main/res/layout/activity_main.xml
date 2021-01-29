@@ -66,17 +66,30 @@
     <Button
         android:id="@+id/sButton"
         android:layout_width="match_parent"
-        android:layout_marginLeft="64dp"
-        android:layout_marginRight="64dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="64dp"
         android:background="@drawable/bg_btn"
         android:text="LOGIN"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegisterlink" />
+
+    <TextView
+        android:id="@+id/tvRegisterlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Register"
+        android:textColor="@color/teal_200"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
 
-<!--<<<<<<< HEAD-->
+    <!--<<<<<<< HEAD-->
 <!--&lt;!&ndash;    <TextView&ndash;&gt;-->
 <!--&lt;!&ndash;        android:id="@+id/vUsername"&ndash;&gt;-->
 <!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->

@@ -58,7 +58,6 @@ class DashboardAdminActivity : AppCompatActivity() {
     //Move Layout level Admin
     private fun createEventIntent(){
         startActivity(Intent(this, CreateEventActivity::class.java))
-        finish()
     }
 
     //MOVE TO LOGIN PAGE
@@ -92,7 +91,7 @@ class DashboardAdminActivity : AppCompatActivity() {
                     var jamMasuk = i.child("JamMasuk").getValue().toString()
                     var jamKeluar = i.child("JamKeluar").getValue().toString()
                     addToList(myString, jamMasuk +" - "+ jamKeluar,
-                        R.mipmap.ic_launcher_round
+                        R.drawable.ic_easter
                     )
                 }
             }

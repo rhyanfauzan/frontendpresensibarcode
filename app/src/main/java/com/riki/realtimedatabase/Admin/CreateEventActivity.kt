@@ -11,7 +11,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.riki.realtimedatabase.R
 import com.riki.realtimedatabase.SharedPreferences.PreferencesHelper
 
-class CreateEventActivity : AppCompatActivity(), View.OnClickListener {
+class CreateEventActivity : AppCompatActivity(){
 
     private lateinit var  sharedpref : PreferencesHelper
     var database = FirebaseDatabase.getInstance().reference
@@ -19,25 +19,15 @@ class CreateEventActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_event)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setTitle("Buat Event")
 
         //Sharedpref
         sharedpref = PreferencesHelper(this)
 
-        fun onSupportNavigateUp(): Boolean{
-            onBackPressed()
-            return super.onSupportNavigateUp()
-        }
-
+        //GET WIDGET
         val namaEvent : EditText = findViewById(R.id.namaEvent)
         val jamMasuk : EditText = findViewById(R.id.jamMasuk)
         val jamKeluar : EditText = findViewById(R.id.jamKeluar)
         val createEventButton : Button = findViewById(R.id.createEventButton)
-
-        val backBtn : ImageView = findViewById(R.id.backBtn)
-        backBtn.setOnClickListener(this)
 
         createEventButton.setOnClickListener {
             if(namaEvent.text.toString() != null && jamMasuk.text.toString() != null && jamKeluar.text.toString() != null ){
@@ -53,12 +43,9 @@ class CreateEventActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.backBtn -> {
-                val moveIntent = Intent(this@CreateEventActivity, DashboardAdminActivity::class.java)
-                startActivity(moveIntent)
-            }
-        }
+
+    override fun onBackPressed() {
+        finish()
+        super.onBackPressed()
     }
 }

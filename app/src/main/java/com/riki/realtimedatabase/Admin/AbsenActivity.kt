@@ -49,7 +49,6 @@ class AbsenActivity : AppCompatActivity() {
             val intent = (Intent(this, AbsenListActivity::class.java))
             intent.putExtra("TITLE", titles)
             this.startActivity(intent)
-            finish()
         }
 
         //TOMBOL LOGOUT
@@ -65,7 +64,7 @@ class AbsenActivity : AppCompatActivity() {
                     generateQrCode(tvTimer.text.toString())
                 }
             }
-        }, 5000, 1000)
+        }, 2000, 1000)
 
 
 
@@ -91,5 +90,10 @@ class AbsenActivity : AppCompatActivity() {
         runOnUiThread {
             tvTimer.text = "${SimpleDateFormat("HH:mm").format(Date())}"
         }
+    }
+
+    override fun onBackPressed() {
+        finish()
+        super.onBackPressed()
     }
 }
